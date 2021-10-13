@@ -1,7 +1,7 @@
 # Default predictor
 
 ## 1. How to run the application
-Perform a POST request to the endpoint: 
+Make a POST request to the endpoint: 
 
 ```https://p2ticod2vc.execute-api.eu-west-1.amazonaws.com/default/defaultPredictor```
 
@@ -52,7 +52,7 @@ with a dictionary in the request body containing all the information about one a
  "worst_status_active_inv": "nan"}
 ```
 
-### Technical information
+### AWS services
 The model has been wrapped in a rest API, hosted by AWS. It triggers a Lambda function that
 relies on a Docker image, compiled locally and then pushed in a registry.
 
