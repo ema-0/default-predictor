@@ -80,7 +80,7 @@ need to build a Docker image able to predict on new data:
     - *model.h5*
 
 Finally, I included the conda environment file *klarna.yml* to recreate
-my developing environment.
+my developing environment with conda.
 
 For instance, with Linux and MacOs:
 ```console
