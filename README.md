@@ -3,7 +3,7 @@
 ## 1. How to run the application
 Make a POST request to the endpoint: 
 
-```https://p2ticod2vc.execute-api.eu-west-1.amazonaws.com/default/defaultPredictor```
+```https://9rnn9xw0hd.execute-api.eu-west-1.amazonaws.com/default/default-predictor```
 
 with a dictionary in the request body containing all the information about one account, for instance:
 
