@@ -3,7 +3,7 @@
 ## 1. How to run the application
 Make a POST request to the endpoint: 
 
-```https://9rnn9xw0hd.execute-api.eu-west-1.amazonaws.com/default/default-predictor```
+``` https://wjjsi2emxd.execute-api.eu-west-1.amazonaws.com/default/default-predictor```
 
 with a dictionary in the request body containing all the information about one account, for instance:
 
@@ -69,7 +69,7 @@ The repo files are organized in 3 folders:
 - `notebooks`: the prototype of the algorithm, with a short description of the
 model and performance evaluation. It includes all the development parts, from data manipulation
 to training and testing of the neural network. Finally, it saves the model and makes predictions.
-- `lambda_default_predictor`: this folder cointains all the files
+- `lambda_default_predictor`: this folder contains all the files
 need to build a Docker image able to predict on new data:
   - *app.py*: the lambda handler
   - *Dockerfile*: the AWS dockerfile to create an image compatible with ECR
@@ -87,3 +87,10 @@ For instance, with Linux and MacOs:
 conda env create -f klarna.yml
 conda activate klarna 
 ```
+
+# 3. References
+
+- [Using container images to run TensorFlow models in AWS Lambda](https://aws.amazon.com/blogs/machine-learning/using-container-images-to-run-tensorflow-models-in-aws-lambda/)
+- [Functions with Up to 10 GB of Memory and 6 vCPUs](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-functions-with-up-to-10-gb-of-memory-and-6-vcpus/)
+- [AWS Lambda base images for Python ](https://hub.docker.com/r/amazon/aws-lambda-python)
+

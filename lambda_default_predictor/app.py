@@ -15,11 +15,13 @@ def handler(event, context):
         numerics_columns = pickle.load(fp)
 
     model = load_model(model_folder_path + 'model.h5')
-
-    event = json.loads(event['body'])
+    if 'body' in event.keys():
+        event = json.loads(event['body'])
 
     df = pd.DataFrame(pd.Series(event)).T
     df = df.fillna(-1)
+    if 'body' not in event.keys():
+        df = df.replace(to_replace={'nan': -1, 'True': True, 'False': False})
 
     df_numerics = df[numerics_columns]
     n_rows = df.shape[0]
